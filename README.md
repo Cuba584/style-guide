@@ -9,14 +9,14 @@
 
 ## Best Practices for HTML/CSS
 
-* Element IDs and class names should always be lowercase-with-dashes. No ``camelCase``!
+* Element IDs and class names should always be ``lowercase-with-dashes``. No ``camelCase``!
 * Write valid semantic markup. That means a top hierarchy header is always wrapped in ``<h1>``, a paragraph is always wrapped in ``<p>``, etc.
 * For our interactives: put all of the script tags right before ``</body>``, so as to not block rendering of the page.
-* DO NOT USE !important.
+* Do NOT use ``!important``.
 * Avoid inline styles and style tags.
 * All media queries go at the bottom of the stylesheet.
 * Your custom stylesheet goes below all CSS frameworks/outside styles.
-* Always be consistent with your units. Use ems for fonts and px for margin/padding. 100vw is an acceptable dimension for an image if you're trying to make it full screen width.
+* Always be consistent with your units. Use ``em`` for fonts and ``px`` for margin/padding. Images are more flexible: ``vw`` and percentages can be used, as well as ``px`` in certain cases.
 * Every image needs an ``alt`` tag for accessibility. We will discuss how that is templated later.
 
 ## Best Practices for Javascript
