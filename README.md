@@ -1,20 +1,23 @@
-# "Cuba is Young" Style Guide
-
-## Index
-[Design](design.md)
-[Development](development.md)
-
-## TO ADD: 
-* separate design/dev md files
-* HTML/CSS guidelines
-* site-specific guidelines (pages, etc.)
-* make your code shorter guidelines
+# "Cuba's New Wave" Development Style Guide
 
 ## Notes for Devs
 * If you don't understand something in the documentation, ask Lindsay. Don't worry too much at first about making style errors for the more complex things, we will go through and check your code frequently and help you adhere to style rules.
 
-## Sources
-This style guide is adapted from the [NPR Apps Best Practices Style Guide](https://github.com/nprapps/bestpractices/blob/master/javascript.md).
+## Site-Specific Styles
+
+* During development, every page will have its own CSS file, with the same name as the page template. (``inner.ejs`` matches ``inner.css``).
+
+## Best Practices for HTML/CSS
+
+* Element IDs and class names should always be lowercase-with-dashes. No ``camelCase``!
+* Write valid semantic markup. That means a top hierarchy header is always wrapped in ``<h1>``, a paragraph is always wrapped in ``<p>``, etc.
+* For our interactives: put all of the script tags right before ``</body>``, so as to not block rendering of the page.
+* DO NOT USE !important.
+* Avoid inline styles and style tags.
+* All media queries go at the bottom of the stylesheet.
+* Your custom stylesheet goes below all CSS frameworks/outside styles.
+* Always be consistent with your units. Use ems for fonts and px for margin/padding. 100vw is an acceptable dimension for an image if you're trying to make it full screen width.
+* Every image needs an ``alt`` tag for accessibility. We will discuss how that is templated later.
 
 ## Best Practices for Javascript
 
@@ -51,5 +54,6 @@ For consistency, prefer the following libraries to others that perform the same 
 * When an event needs to occur for elements which may not yet exist, use `on` in delegated/bubble mode, rather than binding and unbinding events as elements are created and destroyed. For example: `$wrapper.on('click', '.item', onItemClick)`.
 * When using `on` for delegated/bubbled events, always use the *nearest* container div. Do not use `$body` to capture events from anywhere as this degrades performance.
 
-
+## Sources
+This style guide is adapted from the [NPR Apps Best Practices Style Guide](https://github.com/nprapps/bestpractices/blob/master/javascript.md) and [taitems' Front End Web Dev Guidelines](http://taitems.github.io/Front-End-Development-Guidelines/).
 
